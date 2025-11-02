@@ -1,21 +1,19 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
   
-# Next.js generates .next directory, but Netlify plugin handles routing
+# Static export generates 'out' directory
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
-# Next.js on Netlify plugin settings
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# For static export, we don't need the Next.js plugin
+# The plugin is only needed for SSR/ISR features
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
 
-# Redirect rules for Next.js routing
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/next"
-  status = 200
+# Static export doesn't need redirects - all pages are static HTML
+# Redirects are handled by Next.js automatically in static export
 
 # Headers for security and performance
 [[headers]]

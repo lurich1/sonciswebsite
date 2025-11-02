@@ -7,7 +7,9 @@
     "dev": "next dev",
     "lint": "eslint .",
     "start": "node server.js",
-    "next:start": "next start"
+    "next:start": "next start",
+    "export": "next build",
+    "preview": "npx serve out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

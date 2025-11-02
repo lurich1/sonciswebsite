@@ -47,15 +47,15 @@ export default function FeaturesGrid() {
   return (
     <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, idx) => {
             const Icon = feature.icon
             return (
               <div key={idx} className="text-foreground">
-                <div className="py-6">
-                  <Icon className="w-[75px] h-[75px] mb-3 text-accent" strokeWidth={1.5} stroke="currentColor" fill="none" />
-                  <h4 className="text-foreground font-semibold capitalize my-3">{feature.title}</h4>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                <div className="py-4 md:py-6">
+                  <Icon className="w-12 h-12 md:w-[75px] md:h-[75px] mb-2 md:mb-3 text-accent" strokeWidth={1.5} stroke="currentColor" fill="none" />
+                  <h4 className="text-foreground font-semibold capitalize my-2 md:my-3 text-sm md:text-base">{feature.title}</h4>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             )

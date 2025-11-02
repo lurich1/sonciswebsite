@@ -103,16 +103,16 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="border-t border-border pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex flex-wrap gap-4 items-center">
-                  <span className="text-sm text-muted-foreground">Payment Option:</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-start sm:items-center">
+              <span className="text-sm text-muted-foreground">Payment Option:</span>
               <div className="flex gap-3">
                 <Image src="/images/visa-card.png" alt="Visa" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
                 <Image src="/images/paypal-card.png" alt="PayPal" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
                 <Image src="/images/master-card.png" alt="Mastercard" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
               </div>
             </div>
-            <div className="text-right text-sm text-muted-foreground">
+            <div className="text-center md:text-right text-sm text-muted-foreground">
               <p>
                 © Copyright 2025 Soncis. All rights reserved.
               </p>

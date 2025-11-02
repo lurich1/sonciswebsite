@@ -16,7 +16,14 @@ export default function NewsletterSection() {
 
   return (
     <section className="relative py-20 overflow-hidden">
-      <Image src="/images/bg-newsletter.jpg" alt="newsletter background" fill className="object-cover -z-10" />
+      <Image 
+        src="/images/bg-newsletter.jpg" 
+        alt="newsletter background" 
+        fill 
+        className="object-cover -z-10" 
+        sizes="100vw"
+        priority
+      />
 
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center text-white">

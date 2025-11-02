@@ -18,6 +18,8 @@ export default function CategoriesSection() {
               alt={category.title}
               fill
               className="object-cover group-hover:scale-105 transition duration-300"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              loading="lazy"
             />
             <div className="absolute inset-0 flex flex-col items-end justify-end p-8">
               <h3 className="text-white text-2xl font-bold mb-2 uppercase">{category.title}</h3>

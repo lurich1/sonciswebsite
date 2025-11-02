@@ -27,7 +27,15 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="mb-4">
-              <Image src="/images/photo_2025-11-02_05-35-41-removebg-preview.png" alt="Soncis" width={120} height={40} className="h-10 w-auto" />
+              <Image 
+                src="/images/photo_2025-11-02_05-35-41-removebg-preview.png" 
+                alt="Soncis" 
+                width={120} 
+                height={40} 
+                className="h-10 w-auto" 
+                sizes="(max-width: 640px) 100px, 120px"
+                loading="lazy"
+              />
             </div>
             <p className="text-muted-foreground mb-6 text-sm">
               Gravida massa volutpat aenean odio. Amet, turpis erat nullam fringilla elementum diam in. Nisi, purus
@@ -86,8 +94,8 @@ export default function Footer() {
             </p>
             <p className="text-muted-foreground text-sm">
               Do you need support? Give us a call.{" "}
-                <Link href="tel:+43 720 11 52 78" className="hover:text-primary">
-                +43 720 11 52 78
+                <Link href="tel:+233533431086" className="hover:text-primary">
+                0533431086
               </Link>
             </p>
           </div>
@@ -99,17 +107,14 @@ export default function Footer() {
             <div className="flex flex-wrap gap-4 items-center">
                   <span className="text-sm text-muted-foreground">Payment Option:</span>
               <div className="flex gap-3">
-                <Image src="/images/visa-card.png" alt="Visa" width={40} height={25} className="h-auto" />
-                <Image src="/images/paypal-card.png" alt="PayPal" width={40} height={25} className="h-auto" />
-                <Image src="/images/master-card.png" alt="Mastercard" width={40} height={25} className="h-auto" />
+                <Image src="/images/visa-card.png" alt="Visa" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
+                <Image src="/images/paypal-card.png" alt="PayPal" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
+                <Image src="/images/master-card.png" alt="Mastercard" width={40} height={25} className="h-auto w-auto" sizes="40px" loading="lazy" />
               </div>
             </div>
             <div className="text-right text-sm text-muted-foreground">
               <p>
-                © Copyright 2025 Soncis. All rights reserved. Design by{" "}
-                <Link href="https://templatesjungle.com" target="_blank" className="hover:text-primary">
-                  TemplatesJungle
-                </Link>
+                © Copyright 2025 Soncis. All rights reserved.
               </p>
             </div>
           </div>

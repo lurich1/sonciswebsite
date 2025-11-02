@@ -16,7 +16,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image src="/images/photo_2025-11-02_05-35-41-removebg-preview.png" alt="Soncis" width={120} height={40} className="h-10 w-auto" />
+            <Image 
+              src="/images/photo_2025-11-02_05-35-41-removebg-preview.png" 
+              alt="Soncis" 
+              width={120} 
+              height={40} 
+              className="h-10 w-auto" 
+              sizes="(max-width: 640px) 100px, 120px"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

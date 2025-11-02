@@ -25,6 +25,8 @@ export default function InstagramSection() {
                 alt="instagram"
                 fill
                 className="object-cover group-hover:scale-110 transition"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
               />
             </Link>
           ))}

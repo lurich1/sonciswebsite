@@ -48,6 +48,8 @@ export default function BlogSection() {
                   alt={post.title}
                   fill
                   className="object-cover group-hover:scale-105 transition"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
               </div>
               <div className="flex flex-col gap-3">

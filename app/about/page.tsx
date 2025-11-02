@@ -39,6 +39,8 @@ export default function AboutPage() {
           alt="About Us"
           fill
           className="object-cover"
+          sizes="100vw"
+          priority
         />
         <div className="absolute inset-0 bg-primary/40"></div>
         <div className="absolute inset-0 flex items-center justify-center">
@@ -74,6 +76,8 @@ export default function AboutPage() {
                 alt="The Beginning of Our Journey"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
             <div>
@@ -112,6 +116,8 @@ export default function AboutPage() {
                 alt="Who Are We"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
           </div>

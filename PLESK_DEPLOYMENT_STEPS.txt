@@ -1,0 +1,98 @@
+==========================================
+Plesk Deployment - Quick Steps
+==========================================
+
+STEP 1: Build the Application
+-------------------------------
+Run locally or on server:
+  npm run build
+
+STEP 2: Upload Files to Plesk
+-------------------------------
+- Upload entire project folder to your domain directory
+- Usually located at: /httpdocs or /domains/yourdomain.com/httpdocs
+- Can use Plesk File Manager, FTP, or SFTP
+
+STEP 3: Set Up Node.js App in Plesk
+------------------------------------
+1. Log in to Plesk Panel
+2. Go to your domain
+3. Click "Node.js" in the left menu
+4. Click "Add Node.js App"
+5. Configure:
+   - Application root: /httpdocs (or your upload directory)
+   - Application URL: /
+   - Application startup file: server.js
+   - Node.js version: 18.x or higher
+
+STEP 4: Install Dependencies
+-----------------------------
+In Plesk Node.js settings:
+- Click "NPM install"
+OR via SSH:
+  cd /path/to/your/app
+  npm install --production
+
+STEP 5: Set Environment Variables
+----------------------------------
+In Plesk Node.js settings, add:
+- NODE_ENV=production
+- NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+- PORT=3000 (or port assigned by Plesk)
+
+STEP 6: Build on Server (if not built locally)
+------------------------------------------------
+In Plesk Node.js settings:
+- Click "Run NPM Script: build"
+OR via SSH:
+  npm run build
+
+STEP 7: Start the Application
+------------------------------
+In Plesk Node.js settings:
+- Click "Run NPM start"
+- Application should be running!
+
+STEP 8: Verify Deployment
+-------------------------
+- Visit your domain
+- Check all pages load correctly
+- Test cart and wishlist functionality
+- Verify images load properly
+
+==========================================
+Troubleshooting
+==========================================
+
+Issue: Port already in use
+Solution: Change PORT in environment variables or let Plesk assign port
+
+Issue: Build fails
+Solution: 
+- Ensure Node.js 18+ is installed
+- Check all dependencies installed
+- Verify disk space available
+
+Issue: Application won't start
+Solution:
+- Check logs in Plesk Node.js settings
+- Verify server.js file exists
+- Ensure npm start command works
+
+Issue: 404 errors on routes
+Solution:
+- Verify .htaccess is in root (if using Apache)
+- Check Next.js routing is configured correctly
+
+==========================================
+Files Included for Deployment
+==========================================
+
+✓ server.js - Custom Node.js server
+✓ DEPLOYMENT.md - Detailed deployment guide
+✓ .nvmrc - Node.js version specification
+✓ .htaccess - Apache configuration (if needed)
+✓ package.json - Updated with correct start script
+
+==========================================
+

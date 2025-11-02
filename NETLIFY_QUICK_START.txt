@@ -1,0 +1,123 @@
+==========================================
+Netlify Deployment - Quick Start Guide
+==========================================
+
+OPTION 1: Deploy via Netlify Dashboard
+==========================================
+
+1. PUSH CODE TO GIT
+   - Push your code to GitHub/GitLab/Bitbucket
+   
+2. LOGIN TO NETLIFY
+   - Go to: https://app.netlify.com
+   - Sign in or create account
+
+3. ADD NEW SITE
+   - Click "Add new site" → "Import an existing project"
+   - Connect your Git provider
+   - Select your repository
+
+4. CONFIGURE BUILD SETTINGS
+   - Build command: npm run build
+   - Publish directory: .next
+   - Node version: 18
+
+5. SET ENVIRONMENT VARIABLES
+   - Go to: Site settings → Environment variables
+   - Add:
+     NODE_ENV=production
+     NEXT_PUBLIC_SITE_URL=https://your-site.netlify.app
+
+6. DEPLOY
+   - Click "Deploy site"
+   - Wait for build to complete
+   - Your site is live!
+
+==========================================
+
+OPTION 2: Deploy via CLI
+==========================================
+
+1. INSTALL CLI
+   npm install -g netlify-cli
+
+2. LOGIN
+   netlify login
+
+3. INITIALIZE
+   netlify init
+   - Choose: Create & configure a new site
+   - Build command: npm run build
+   - Publish directory: .next
+
+4. SET ENV VARIABLES
+   netlify env:set NODE_ENV production
+   netlify env:set NEXT_PUBLIC_SITE_URL https://your-site.netlify.app
+
+5. DEPLOY
+   netlify deploy --prod
+
+==========================================
+
+REQUIRED FILES
+==========================================
+
+✓ netlify.toml (already created)
+✓ package.json
+✓ next.config.mjs
+✓ All source files
+
+The netlify.toml file includes:
+- Build configuration
+- Next.js plugin setup
+- Redirect rules
+- Security headers
+- Cache settings
+
+==========================================
+
+IMPORTANT NOTES
+==========================================
+
+1. The @netlify/plugin-nextjs will be 
+   automatically installed during build
+
+2. Your site URL will be:
+   https://your-site-name.netlify.app
+
+3. Automatic deployments happen on:
+   - Push to main/master branch
+
+4. Pull requests get deploy previews
+   automatically
+
+5. HTTPS and CDN are included free!
+
+==========================================
+
+TROUBLESHOOTING
+==========================================
+
+Build fails?
+→ Check build logs in Netlify Dashboard
+→ Verify Node 18+ is selected
+→ Ensure all dependencies are in package.json
+
+404 errors?
+→ netlify.toml already has redirect rules
+→ @netlify/plugin-nextjs should install automatically
+
+Images not loading?
+→ Verify public folder is included
+→ Check image paths are correct
+
+==========================================
+
+SUPPORT
+==========================================
+
+Netlify Docs: https://docs.netlify.com
+Next.js on Netlify: https://docs.netlify.com/integrations/frameworks/next-js/
+
+==========================================
+

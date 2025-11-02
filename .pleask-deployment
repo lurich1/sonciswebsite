@@ -1,0 +1,28 @@
+# Plesk Deployment Configuration
+
+## Node.js App Settings
+Startup File: server.js
+Node Version: 18.x or higher
+App Mode: Production
+
+## Build Command
+npm run build
+
+## Start Command
+npm start
+
+## Environment Variables
+NODE_ENV=production
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+PORT=3000
+
+## Required Files
+- server.js (custom server)
+- package.json
+- next.config.mjs
+- .next/ (generated after build)
+- public/
+- app/
+- components/
+- lib/
+
